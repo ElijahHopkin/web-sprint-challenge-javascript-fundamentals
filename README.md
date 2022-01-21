@@ -25,14 +25,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+`.map` is a array method used to run through an existing array and return it modified as a new array. MDN uses the example of multiplying all items in an array by a given figure, but it can be used to modify any detail of each of the elements in the array.
+`.reduce` is used to run through the array and reducing it to a single integer. we've only used it to reduce numbered arrays to single integers so far.
+`.filter` is used to parse ferret out elements with specific characteristics. It will return the desired items/array as a new constant, and reject those that don't fit the requirements.
 
 2. Explain the difference between a callback and a higher order function.
 
+A higher order function receives a callback function. The callback function is used as an argument for the higher order function. It serves the higher order function.
+
 3. Explain what a closure is.
+
+Closure pertains to nested functions. When a nested(inner) function reaches out into the outer function housing it for information needed to complete its (inner) function.
 
 4. Describe the four principles of the 'this' keyword.
 
+-GLOBAL- 'this' is not attached to anything in particular. In this case the console will give you the whole window and all the javascript contained therein--which is way too much information to be useful. 'This' in the global scope is an error.
+
+-IMPLICIT- 'This' is initially written within a function as a mere place holder and lacks concrete value, UNTIL a method is called. When a method is called there is a dot in the method that correlates to the dot in 'this._____' in the original function. Whatever the method is asking you to do, to the left of the dot becomes the implicit owner of 'this', ...thus giving you guidance for how to apply the method to what function and how.
+-NEW- the 'this' is reassigned by using the 'new' keyword so that 'this' now applies to the new object desired. It requires you to invoke the function and assign 'this' to the object using the 'new' keyword.
+-EXPLICIT- methods such as '.call', '.apply', or '.bind' force 'this' to apply to the object explicitly named in that command
+
 5. Why do we need super() in an extended class?
+
+Super serves the same purpose as .call in function prototypes. Super facilitates the inheritance of all the parent class keys, values, and methods to the child class. (Super is written in the child class, calling up to the parent for that inheritance.)
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
